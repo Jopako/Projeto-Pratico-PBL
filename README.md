@@ -89,10 +89,10 @@ const somatoria = (x) => (y) => x + y;
 
 ```javascript
 const vendas = [
-  { item: 'Notebook', preco: 1000, cat: 'tech' },
-  { item: 'Cadeira', preco: 150, cat: 'moveis' },
-  { item: 'Mouse', preco: 50, cat: 'tech' },
-  { item: 'Monitor', preco: 600, cat: 'tech' }
+  { item: 'Notebook', preco: 1000, categoria: 'tech' },
+  { item: 'Cadeira', preco: 150, categoria: 'moveis' },
+  { item: 'Mouse', preco: 50, categoria: 'tech' },
+  { item: 'Monitor', preco: 600, categoria: 'tech' }
 ];
 
  // filtrarPorValorMinimo(min) → deve retornar uma função que recebe uma lista e filtra 
