@@ -82,16 +82,16 @@ const vendas = [
   { item: 'Monitor', preco: 600, cat: 'tech' }
 ];
 
- • filtrarPorValorMinimo(min) → deve retornar uma função que recebe uma lista e filtra 
+ // filtrarPorValorMinimo(min) → deve retornar uma função que recebe uma lista e filtra 
 
-Const filtrarPorValorMinimo = (min) =>
+const filtrarPorValorMinimo = (min) =>
 {
 	return (vendas) => vendas.filter(item => item.preco <= min);
 };
 
-• filtrarPorCategoria(categoria) → mesma ideia, filtro por campo de texto 
+// filtrarPorCategoria(categoria) → mesma ideia, filtro por campo de texto 
 
-Const  filtrarPorCategoria = (categoria) =>
+const  filtrarPorCategoria = (categoria) =>
 {
 
 	return (vendas) => vendas.filter(item => item.categoria === categoria);
