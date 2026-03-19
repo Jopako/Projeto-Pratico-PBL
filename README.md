@@ -26,7 +26,7 @@
 - Qual a Categoria mais rentável?
   Dividir a soma de vendas da _Categoria pelo valor total geral de todas as vendas.
 
-### Se fossem resolver isso com um loop for, como seria? Escrevam o pseudocódigo. 
+### Se fosse resolver isso com um loop for, como seria? Escrevao pseudocódigo. 
 
 ```java
 List<String> vendedores = new ArrayList<String>();
@@ -58,7 +58,7 @@ O código imperativo seria um fator de atraso nas necessidades que o problema ap
 
 ## 2) Implemente as funções de filtragem. Implemente as duas funções abaixo. 
 
-### Pesquisem como escrever funções que retornam outras funções em JavaScript e por que isso é útil para composição.
+### Como escrever funções que retornam outras funções em JavaScript e por que isso é útil para composição?
 
 - Facilita a reutilização, aproveita uma função que recebe vários argumentos, fazendo vários argumentos receberem uma função. 
 
