@@ -40,9 +40,7 @@ for(String vendedor : vendedores)
 contador++;
 }
 
-
 System.out.println("O vendedor " + nomeProcurado + " aparece " +contador+ " vezes na lista de vendas.");
-
 
   }
 }
