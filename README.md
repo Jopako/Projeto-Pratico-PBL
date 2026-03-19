@@ -14,19 +14,19 @@
 
 ### Que perguntas de negócio poderíamos responder com esses dados?
 
-- Qual valor total da compra por Cliente?
+-Qual valor total da compra por Cliente?
  O valor total gasto por _Id de cliente levando em consideração _Valor  e quantidade de _Produto
 
-- É possível conceber comissões para o vendedor?
+-É possível conceber comissões para o vendedor?
  Sim, conforme quão recorrente o nome é apresentado é possível calcular sua comissão.
 
-- Quando foi efetuada a venda de um produto específico/vendedor/categoria?
+-Quando foi efetuada a venda de um produto específico/vendedor/categoria?
  É possível visualizar através da _Data 
 
-- Será possível identificar a categoria a que cada produto pertence?
+-Será possível identificar a categoria a que cada produto pertence?
  Sim, com os campos _Categoria e _Produto.
 
-- Qual a Categoria mais rentável?
+-Qual a Categoria mais rentável?
   Dividir a soma de vendas da _Categoria pelo valor total geral de todas as vendas.
 
 ### Se fosse resolver isso com um loop for, como seria? Escreva o pseudocódigo. 
