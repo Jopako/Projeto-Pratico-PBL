@@ -71,6 +71,11 @@ function a(b)
  }
 ```
 
+Ou usando uma arrow function. 
+```js
+const somatoria = (x) => (y) => x + y;
+```
+
 - Facilita a reutilização, aproveita uma função que recebe vários argumentos, fazendo vários argumentos receberem uma função. 
 
 - Criação de pipelines, fazendo passar o valor de uma função diretamente para outra (f(a(b)).
