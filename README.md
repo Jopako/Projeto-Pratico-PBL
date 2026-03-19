@@ -26,7 +26,7 @@
 - Qual a Categoria mais rentável?
   Dividir a soma de vendas da _Categoria pelo valor total geral de todas as vendas.
 
-### Se fosse resolver isso com um loop for, como seria? Escrevao pseudocódigo. 
+### Se fosse resolver isso com um loop for, como seria? Escreva o pseudocódigo. 
 
 ```java
 List<String> vendedores = new ArrayList<String>();
