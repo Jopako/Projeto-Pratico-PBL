@@ -63,7 +63,7 @@ O código imperativo seria um fator de atraso nas necessidades que o problema ap
 
 - Redução de repetições, mais fáceis de usar, podem ser combinadas para realizar atividades mais complexas. 
 
-```
+```javascript
 const vendas = [
   { item: 'Notebook', preco: 1000, cat: 'tech' },
   { item: 'Cadeira', preco: 150, cat: 'moveis' },
