@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 color: blue;>Projeto-Pratico-PBL</h1>
+  <h1>Projeto-Pratico-PBL</h1>
   <p>Alunos: João Paulo Kowalski & Samuel Castilho Pereira </p>
 </div>
 
