@@ -60,6 +60,14 @@ O código imperativo seria um fator de atraso nas necessidades que o problema ap
 
 ### Como escrever funções que retornam outras funções em JavaScript e por que isso é útil para composição?
 
+Utilizando return, fazendo uma função retornar outra função: 
+```js
+function a(b)
+ {
+ return b();
+ }
+```
+
 - Facilita a reutilização, aproveita uma função que recebe vários argumentos, fazendo vários argumentos receberem uma função. 
 
 - Criação de pipelines, fazendo passar o valor de uma função diretamente para outra (f(a(b)).
