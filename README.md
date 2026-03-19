@@ -1,5 +1,7 @@
-# Projeto-Pratico-PBL 
-### João Paulo Kowalski & Samuel Castilho Pereira 
+<div align="center">
+  <h1>Projeto-Pratico-PBL</h1>
+  <p>Alunos: João Paulo Kowalski & Samuel Castilho Pereira </p>
+</div>
 
 ## 1) Quais campos cada objeto de venda tem? O que cada um representa? 
 
