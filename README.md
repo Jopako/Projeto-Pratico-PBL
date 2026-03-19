@@ -99,7 +99,7 @@ const vendas = [
 
 const filtrarPorValorMinimo = (min) =>
 {
-	return (vendas) => vendas.filter(item => item.preco <= min);
+	return (vendas) => vendas.filter(item => item.preco >= min);
 };
 
 // filtrarPorCategoria(categoria) → mesma ideia, filtro por campo de texto 
