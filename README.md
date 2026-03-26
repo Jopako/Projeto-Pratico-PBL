@@ -206,9 +206,9 @@ Porque dessa forma uma nova função sempre esperava pelo próximo argumento, se
  ```js 
  //todas as func vão parar dentro do pipe, como se fosse uma esteira
 // (...) é o Spread/rest. 
-//O Spread é usado na execução, ele pega os itense e "desempacota"
+//O Spread é usado na execução, ele pega os itens e "desempacota"
 // O rest pega os restos dos argumentos e coloca num array
-// ou seja, ele faz pipe(func1,func2,func3) e trasnforma estes items espalhados numa array pipe = [func1,func2,func3]
+// ou seja, ele faz pipe(func1,func2,func3) e trasnforma estes itens espalhados numa array pipe = [func1,func2,func3]
 const pipe = (...funcoes) => (valorInicial) => 
   funcoes.reduce((acc, fn) => fn(acc), valorInicial);
 
