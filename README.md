@@ -200,11 +200,8 @@ Porque dessa forma uma nova função sempre esperava pelo próximo argumento, se
 
 ## 2) Implemente a função pipe do zero 
 
-- Implemente pipe usando apenas reduce — sem loops
-- Teste: pipe(f, g, h)(valor) deve ser equivalente a h(g(f(valor)))
-- O que acontece se você passar apenas uma função para o pipe?
-
-O Rest (...funcoes) criará um array com apenas um item: [fn]. O reduce executará apenas uma vez, aplicando fn(valorInicial). O resultado será apenas o retorno dessa única função, sem erro algum.
+### Implemente pipe usando apenas reduce — sem loops
+### Teste: pipe(f, g, h)(valor) deve ser equivalente a h(g(f(valor)))
 
  ```js 
  //todas as func vão parar dentro do pipe, como se fosse uma esteira
@@ -251,6 +248,10 @@ const analiseTechCara = pipe(
 const resultado = analiseTechCara(vendas);
 console.log(`Total da análise: R$ ${resultado}`); 
 ```
+### - O que acontece se você passar apenas uma função para o pipe?
+
+O Rest (...funcoes) criará um array com apenas um item: [fn]. O reduce executará apenas uma vez, aplicando fn(valorInicial). O resultado será apenas o retorno dessa única função, sem erro algum.
+
 
 
 
