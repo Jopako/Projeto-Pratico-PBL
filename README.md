@@ -283,6 +283,15 @@ console.log(somaTechComDesconto(vendas));
 // Saída: { tech: 1440 }
 ```
 
+
+### - Se precisarem adicionar um novo filtro amanhã, quanto do código muda?
+
+O código muda pouco se comparado com outros métodos e fluxos de funções, a nova função seria criada no padrão (param => (vendas) => ...) e adiciconada na lista do pipe. Como no exemplo da função que aplica desconto a um produto, que anteriormente não foi colocada no pipe, mas no segundo exemplo a função foi criada e um novo pipe com essa função, após a função de filtragem, foi adicionado. O pipe ainda ficou semelhante ao primeiro, mas o fluxo e retorno foram devidamente alterados pela nova função adicionada.
+
+### - Como reaproveitariam um dos pipelines para um dataset diferente?
+
+Um novo dataset poderia passar por esses pipes caso fosse um array e com os mesmo campos que o de vendas. As funções poderiam permanecer quase iguais, mas caso um ajuste fosse necessário, ou alguma função que não fosse necessária no fluxo, o pipe ainda poderia ser facilmente reaproveitado, apenas com algum desses ajustes ou até uma nova fução no pipe para adaptar o dataset a esse fluxo. O segundo pipe por exemplo seria muito útil para qualquer dataset de vendas, se houvesse alguma mudança de nome de campo, as funções de resumir e filtros poderiam ser pouco alteradas e fluxo ainda retornaria produtos com valor mínimo e categoria especificados, aleḿ de um desconto desejado. 
+
 ## 4) E se um estágio falhar?
 
 ### - O que acontece quando um estágio do pipeline recebe dados inesperados? 
