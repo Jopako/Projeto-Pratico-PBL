@@ -19,9 +19,3 @@ const ordenarPorValor = Object.entries(totalPorCategoria)
     .toSorted((a, b) => b.total - a.total); //ordena o array por valor
 
 console.log(ordenarPorValor)
-
-
-
-
-
-
