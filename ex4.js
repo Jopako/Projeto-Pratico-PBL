@@ -11,8 +11,6 @@ const vendas = [
 
 const vendasVazio = []
 
-
-
 const filtrarPorValorMinimo = (min) =>
 {
 	return (vendas) => vendas.filter(item => item.preco >= min);
@@ -22,8 +20,6 @@ const  filtrarPorCategoria = (categoria) =>
 {
 	return (vendas) => vendas.filter(item => item.categoria === categoria);
 }
-
-
 
 const resumir = produtos.map(({produto, valor, categoria}) => ({produto, valor, categoria}))
 
@@ -46,8 +42,6 @@ console.assert(filtrarPorValorMinimo(100)(vendasVazio).length === 4, "quatro val
 console.assert(filtrarPorCategoria('perfiféricos')(vendas).length === 1, "um valor da categoria periféricos")
 console.assert(filtrarPorCategoria('moveis')(vendas).length === 1, "um valor da categoria moveis")
 console.assert(filtrarPorCategoria('moveis')(vendasVazio).length === 1, "um valor da categoria moveis da lista vazia")
-
-
 
 console.assert(resumir.length === 50, "resumir deve ter 50 itens");
 console.assert(resumir[0].vendedor === undefined, "resumir não deve conter vendedor");
