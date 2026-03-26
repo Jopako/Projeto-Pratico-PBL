@@ -252,7 +252,36 @@ console.log(`Total da análise: R$ ${resultado}`);
 
 O Rest (...funcoes) criará um array com apenas um item: [fn]. O reduce executará apenas uma vez, aplicando fn(valorInicial). O resultado será apenas o retorno dessa única função, sem erro algum.
 
+## 3) 2 pipelines de análise
 
+### Soma de valores da categoria tech acima de 100 
+
+```js
+const somaVendasTechAcimaDe100 = pipe(
+  filtrarPorValorMinimo(100),
+  filtrarPorCategoria('tech'),
+  resumir,
+  totalPorCategoria
+);
+
+console.log(somaVendasTechAcimaDe100(vendas));
+// Saída: { tech: 1600 }
+```
+
+### Soma de vendas de produtos tech acima de 100 com 10% de desconto
+
+```js
+const somaTechComDesconto = pipe(
+  filtrarPorValorMinimo(100),
+  filtrarPorCategoria('tech'),
+  aplicarDesconto(10),
+  resumir,
+  totalPorCategoria
+);
+
+console.log(somaTechComDesconto(vendas));
+// Saída: { tech: 1440 }
+```
 
 ## 4) E se um estágio falhar?
 
