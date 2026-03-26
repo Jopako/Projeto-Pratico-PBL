@@ -345,4 +345,5 @@ const resultado = analiseCozinha(vendas);
 
 console.log(resultado === null ? "Pipeline parado: critério não encontrado." : `Total: ${resultado}`);
 ```
-
+# Site 
+## Para acessar o site, [Clique aqui!] (https://jopako.github.io/Projeto-Pratico-PBL/)
