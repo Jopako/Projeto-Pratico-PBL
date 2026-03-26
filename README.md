@@ -204,7 +204,7 @@ Porque dessa forma uma nova função sempre esperava pelo próximo argumento, se
 - Teste: pipe(f, g, h)(valor) deve ser equivalente a h(g(f(valor)))
 - O que acontece se você passar apenas uma função para o pipe?
 
- ´´´js 
+ ```js 
  //todas as func vão parar dentro do pipe, como se fosse uma esteira
 // (...) é o Spread/rest. 
 //O Spread é usado na execução, ele pega os itense e "desempacota"
@@ -248,7 +248,7 @@ const analiseTechCara = pipe(
 
 const resultado = analiseTechCara(vendas);
 console.log(`Total da análise: R$ ${resultado}`); 
-´´´
+```
 
 
 
