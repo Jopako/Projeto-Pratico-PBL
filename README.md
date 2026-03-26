@@ -111,3 +111,54 @@ const  filtrarPorCategoria = (categoria) =>
 
 } 
 ```
+## 3)
+
+1. **`resumir`** — Extrai apenas `produto`, `valor` e `categoria` de cada item usando `.map()` com destructuring
+2. **`totalPorCategoria`** — Agrupa e soma os valores por categoria usando `.reduce()`
+3. **`ordenarPorValor`** — Ordena as categorias por total de forma decrescente usando `.toSorted()`
+
+## 4)
+
+### Funções de filtragem (curried)
+- **`filtrarPorValorMinimo(min)(lista)`** — Retorna itens com `preco >= min`
+- **`filtrarPorCategoria(cat)(lista)`** — Retorna itens com `categoria === cat`
+
+### Testes por função
+
+#### `filtrarPorValorMinimo`
+| Teste | Esperado |
+|---|---|
+| `filtrarPorValorMinimo(800)(vendas).length === 2` | Notebook (1000) e Monitor (600+) passam |
+| `filtrarPorValorMinimo(-1)(vendas).length === 4` | Todos os 4 itens têm preço >= -1 |
+| `filtrarPorValorMinimo(100)(vendasVazio).length === 4` | Assertion failed: Lista vazia retorna 0, não 4 |
+
+#### `filtrarPorCategoria`
+| Teste | Esperado |
+|---|---|
+| `filtrarPorCategoria('perfiféricos')(vendas).length === 1` | Assertion failed: Typo no nome da categoria, não encontra nenhum |
+| `filtrarPorCategoria('moveis')(vendas).length === 1` | Cadeira é o único item da categoria moveis |
+| `filtrarPorCategoria('moveis')(vendasVazio).length === 1` | Assertion failed: Lista vazia retorna 0, não 1 |
+
+#### `resumir`
+| Teste | Esperado |
+|---|---|
+| `resumir.length === 50` | 50 produtos mapeados |
+| `resumir[0].vendedor === undefined` | Map extraiu só produto/valor/categoria |
+| `resumir[0].produto !== undefined` | Campo produto foi mantido |
+| `resumir.length === 10` | Assertion failed: São 50 itens, não 10 |
+| `resumir[0].vendedor !== undefined` | Assertion failed: Vendedor foi removido pelo map |
+
+#### `totalPorCategoria`
+| Teste | Esperado |
+|---|---|
+| `totalPorCategoria['tech'] === 7700` | ✅ Notebook (3200) + Ultrabook (4500) = 7700 |
+| `totalPorCategoria['periféricos'] === 1000` | ✅ Mouse (150) + Teclado (450) + Webcam (280) + Mousepad (120) = 1000 |
+| `totalPorCategoria['tech'] === 0` | Assertion failed: Tech soma 7700, não 0 |
+| `totalPorCategoria['inexistente'] === 500` | Assertion failed: Categoria não existe, retorna undefined |
+
+#### `ordenarPorValor`
+| Teste | Esperado |
+|---|---|
+| `ordenarPorValor[0].total >= ordenarPorValor[1].total` | Primeiro item tem o maior total |
+| `ordenarPorValor[0].total <= ordenarPorValor[1].total` | Assertion failed: Está em ordem decrescente, primeiro é maior |
+
