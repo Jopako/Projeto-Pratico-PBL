@@ -169,6 +169,9 @@ Para ordenar uma lista (array) sem mutar o array original em JavaScript, a melho
 | `ordenarPorValor[0].total <= ordenarPorValor[1].total` | Assertion failed: Está em ordem decrescente, primeiro é maior |
 
 
+<div align="center">
+  <h1>Composição e Pipeline</h1>
+</div>
 
 ## 1) O que é composição de funções?: 
 
