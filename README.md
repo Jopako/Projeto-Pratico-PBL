@@ -168,3 +168,28 @@ Para ordenar uma lista (array) sem mutar o array original em JavaScript, a melho
 | `ordenarPorValor[0].total >= ordenarPorValor[1].total` | Primeiro item tem o maior total |
 | `ordenarPorValor[0].total <= ordenarPorValor[1].total` | Assertion failed: Está em ordem decrescente, primeiro é maior |
 
+
+
+## 1) O que é composição de funções?: 
+
+### O que é composição de funções? Em que situações ela elimina código desnecessário?
+
+É o processo de empilhar funções, passando o resultado de uma função como entrada para outra.
+
+Em termos matemáticos: f(x) e g(x) a composição deles seria f(g(x)).
+
+Eliminando variáveis temporárias,que só serviriam para serem usadas na próxima linha. Reduz tamanho de código, reutiliza a lógica sem criar funções novas.
+
+ ### Qual a diferença entre pipe e compose? Qual a ordem de execução em cada um?
+
+A diferença entre Pipe e Compose é a ordem de execução da função, no momento de empilhamento de multiplas operações.
+
+Pipe: Executa a função da esquerda para direita (ou do topo para baixo). É considerado mais intuitivo pois combina com a ordem natural de leitura e o fluxo dos dados.
+
+Compose: Executa as funções da direita para a esquerda. Tem uma aproximação maior com a matemática tradicional. Assim como (f * g)(x) = f(g(x)), onde G é aplicado a X primeiro.
+
+ ### Por que as funções do módulo 1 foram escritas com currying?O que isso permite? 
+
+Porque dessa forma uma nova função sempre esperava pelo próximo argumento, sem retornar um resultado até que todos os argumentos sejam passados. Usando essa técnica, as funções se tornaram mais especializadas e puderam ser reutilizadas como argumento para as outras funções. No exercício 3 por exemplo, a função resumir serve de argumento para totalPorCategoria, que então serve de argumento para ordenarPorValor, cada uma responsável por uma parte do fluxo.
+
+
