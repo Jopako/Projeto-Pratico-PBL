@@ -291,6 +291,49 @@ Quando um estágio do pipeline recebe algo inesperado (como um undefined ou uma 
 
 ### - Como linguagens funcionais lidam com erros sem exceções?
 
+Linguagens funcionais gerenciam erros sem exceções tratando-os como valores normais de retorno, utilizando tipos algébricos de dados como Option/Maybe para ausência de valor ou Result/Either para sucesso ou erro. Essa abordagem força o tratamento do erro explicitamente pelo compilador, garantindo segurança, previsibilidade e eliminando efeitos colaterais ocultos, comuns no tratamento de exceções.
+
+• Pesquisem: "Maybe monad javascript", "functional error handling JS"
+• Adaptem um dos pipelines para lidar com o caso em que filtrarPorCategoria não
+encontra nenhum resultado
+• A solução precisa ser funcional — sem try/catch espalhado pelo código
+
+```js
+// Se o acumulador (acc) chegar como null ele ignora as próximas funções
+const pipe = (...funcoes) => (valorInicial) => 
+  funcoes.reduce((acc, fn) => (acc === null ? null : fn(acc)), valorInicial);
+
+// Ent se o Maybe encontrar um array vazio ele vai retornar como null.
+const filtrarPorCategoria = (categoria) => (vendas) => {
+  const res = vendas.filter(item => item.categoria === categoria);
+  return res.length > 0 ? res : null; // Se não achar nada retorna o sinal de parada
+};
+
+const filtrarPorValorMinimo = (min) => (vendas) => {
+  const res = vendas.filter(item => item.preco >= min);
+  return res.length > 0 ? res : null;
+};
+
+const calcularTotal = (lista) => 
+  lista.reduce((soma, produto) => soma + produto.preco, 0);
 
 
+
+const vendas = [
+  { item: 'Notebook', preco: 1000, categoria: 'tech' },
+  { item: 'Cadeira', preco: 150, categoria: 'moveis' }
+];
+
+// caso onde o filtrarporcat nao encontra nada:
+const analiseCozinha = pipe(
+  filtrarPorCategoria('cozinha'), // Retorna null
+  filtrarPorValorMinimo(100),     // nem vai executar 
+  calcularTotal                   // nem vai executar 
+);
+
+const resultado = analiseCozinha(vendas);
+
+
+console.log(resultado === null ? "Pipeline parado: critério não encontrado." : `Total: ${resultado}`);
+```
 
