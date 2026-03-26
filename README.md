@@ -293,10 +293,10 @@ Quando um estágio do pipeline recebe algo inesperado (como um undefined ou uma 
 
 Linguagens funcionais gerenciam erros sem exceções tratando-os como valores normais de retorno, utilizando tipos algébricos de dados como Option/Maybe para ausência de valor ou Result/Either para sucesso ou erro. Essa abordagem força o tratamento do erro explicitamente pelo compilador, garantindo segurança, previsibilidade e eliminando efeitos colaterais ocultos, comuns no tratamento de exceções.
 
-• Pesquisem: "Maybe monad javascript", "functional error handling JS"
-• Adaptem um dos pipelines para lidar com o caso em que filtrarPorCategoria não
+### • Pesquisem: "Maybe monad javascript", "functional error handling JS"
+### • Adaptem um dos pipelines para lidar com o caso em que filtrarPorCategoria não
 encontra nenhum resultado
-• A solução precisa ser funcional — sem try/catch espalhado pelo código
+### • A solução precisa ser funcional — sem try/catch espalhado pelo código
 
 ```js
 // Se o acumulador (acc) chegar como null ele ignora as próximas funções
