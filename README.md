@@ -194,7 +194,7 @@ Pipe: Executa a função da esquerda para direita (ou do topo para baixo). É co
 
 Compose: Executa as funções da direita para a esquerda. Tem uma aproximação maior com a matemática tradicional. Assim como (f * g)(x) = f(g(x)), onde G é aplicado a X primeiro.
 
- ### Por que as funções do módulo 1 foram escritas com currying?O que isso permite? 
+ ### Por que as funções do módulo 1 foram escritas com currying? O que isso permite? 
 
 Porque dessa forma uma nova função sempre esperava pelo próximo argumento, sem retornar um resultado até que todos os argumentos sejam passados. Usando essa técnica, as funções se tornaram mais especializadas e puderam ser reutilizadas como argumento para as outras funções. No exercício 3 por exemplo, a função resumir serve de argumento para totalPorCategoria, que então serve de argumento para ordenarPorValor, cada uma responsável por uma parte do fluxo.
 
