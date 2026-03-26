@@ -117,6 +117,12 @@ const  filtrarPorCategoria = (categoria) =>
 2. **`totalPorCategoria`** — Agrupa e soma os valores por categoria usando `.reduce()`
 3. **`ordenarPorValor`** — Ordena as categorias por total de forma decrescente usando `.toSorted()`
 
+Para ordenar uma lista (array) sem mutar o array original em JavaScript, a melhor opção moderna é utilizar o método toSorted().
+
+- sort() (Modifica o original): Ordena o array in-place (no local), ou seja, altera diretamente a referência da lista original e retorna o mesmo array ordenado.
+- toSorted() (Não modifica o original): Este método cria uma cópia do array, ordena essa cópia e a retorna, mantendo o array original intacto.
+- Nem todas as funções recebem a lista como último argumento, essa é uma característica de bibliotecas projetadas para facilitar o "currying" e a composição de funções. No JavaScript nativo, a estrutura varia. Em muitos casos de métodos que aceitam callbacks (como map, filter, reduce), porém, em funções focadas em imutabilidade e manipulação de dados, colocar a lista por último facilita o fluxo de dados (pipe ou compose).
+
 ## 4)
 
 ### Funções de filtragem
