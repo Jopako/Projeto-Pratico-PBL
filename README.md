@@ -254,5 +254,14 @@ O Rest (...funcoes) criará um array com apenas um item: [fn]. O reduce executar
 
 
 
+## 4) E se um estágio falhar?
+
+### - O que acontece quando um estágio do pipeline recebe dados inesperados? 
+
+Quando um estágio do pipeline recebe algo inesperado (como um undefined ou uma lista vazia onde se esperava um objeto), o próximo estágio geralmente quebra, causando o erro: "Cannot read property 'x' of undefined".
+
+### - Como linguagens funcionais lidam com erros sem exceções?
+
+
 
 
