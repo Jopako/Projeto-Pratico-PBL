@@ -151,8 +151,8 @@ const  filtrarPorCategoria = (categoria) =>
 #### `totalPorCategoria`
 | Teste | Esperado |
 |---|---|
-| `totalPorCategoria['tech'] === 7700` | ✅ Notebook (3200) + Ultrabook (4500) = 7700 |
-| `totalPorCategoria['periféricos'] === 1000` | ✅ Mouse (150) + Teclado (450) + Webcam (280) + Mousepad (120) = 1000 |
+| `totalPorCategoria['tech'] === 7700` | Notebook (3200) + Ultrabook (4500) = 7700 |
+| `totalPorCategoria['periféricos'] === 1000` | Mouse (150) + Teclado (450) + Webcam (280) + Mousepad (120) = 1000 |
 | `totalPorCategoria['tech'] === 0` | Assertion failed: Tech soma 7700, não 0 |
 | `totalPorCategoria['inexistente'] === 500` | Assertion failed: Categoria não existe, retorna undefined |
 
