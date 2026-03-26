@@ -119,7 +119,7 @@ const  filtrarPorCategoria = (categoria) =>
 
 ## 4)
 
-### Funções de filtragem (curried)
+### Funções de filtragem
 - **`filtrarPorValorMinimo(min)(lista)`** — Retorna itens com `preco >= min`
 - **`filtrarPorCategoria(cat)(lista)`** — Retorna itens com `categoria === cat`
 
